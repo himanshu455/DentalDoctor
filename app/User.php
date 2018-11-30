@@ -27,4 +27,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    //Relationship for user and userImage
+
+     public function userimage() {
+
+            return $this->hasOne('App\Patientimage');
+     }
 }
